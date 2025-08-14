@@ -1,0 +1,451 @@
+2025-08-14 12:14:15,155 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 12:14:15,156 - app.main - INFO - Initializing database...
+2025-08-14 12:14:15,156 - app.db.database - INFO - Creating database tables...
+2025-08-14 12:14:15,156 - app.db.database - INFO - Creating database tables...
+2025-08-14 12:14:15,218 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:14:15,219 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 12:14:15,219 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 12:14:15,219 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:14:15,224 - sqlalchemy.engine.Engine - INFO - PRAGMA temp.table_info("deals")
+2025-08-14 12:14:15,224 - sqlalchemy.engine.Engine - INFO - PRAGMA temp.table_info("deals")
+2025-08-14 12:14:15,225 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:14:15,225 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:14:15,228 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE deals (
+	id INTEGER NOT NULL, 
+	product_name VARCHAR(255) NOT NULL, 
+	price FLOAT NOT NULL, 
+	merchant VARCHAR(100) NOT NULL, 
+	expiry DATETIME NOT NULL, 
+	discount FLOAT, 
+	description TEXT, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, 
+	updated_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-08-14 12:14:15,228 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE deals (
+	id INTEGER NOT NULL, 
+	product_name VARCHAR(255) NOT NULL, 
+	price FLOAT NOT NULL, 
+	merchant VARCHAR(100) NOT NULL, 
+	expiry DATETIME NOT NULL, 
+	discount FLOAT, 
+	description TEXT, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, 
+	updated_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-08-14 12:14:15,240 - sqlalchemy.engine.Engine - INFO - [no key 0.01202s] ()
+2025-08-14 12:14:15,240 - sqlalchemy.engine.Engine - INFO - [no key 0.01227s] ()
+2025-08-14 12:14:15,457 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_deals_id ON deals (id)
+2025-08-14 12:14:15,459 - sqlalchemy.engine.Engine - INFO - [no key 0.00180s] ()
+2025-08-14 12:14:15,636 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_deals_product_name ON deals (product_name)
+2025-08-14 12:14:15,638 - sqlalchemy.engine.Engine - INFO - [no key 0.00186s] ()
+2025-08-14 12:14:15,791 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_deals_merchant ON deals (merchant)
+2025-08-14 12:14:15,794 - sqlalchemy.engine.Engine - INFO - [no key 0.00245s] ()
+2025-08-14 12:14:15,936 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 12:14:15,938 - app.db.database - INFO - Database tables created successfully
+2025-08-14 12:14:15,940 - app.db.database - ERROR - Database health check failed: Not an executable object: 'SELECT 1'
+2025-08-14 12:14:15,942 - app.main - ERROR - Database health check failed
+2025-08-14 12:14:15,943 - app.main - ERROR - Failed to start application: Database initialization failed
+2025-08-14 12:14:15,978 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:14:15,979 - app.db.database - ERROR - Error creating database tables: (sqlite3.OperationalError) table deals already exists
+[SQL: 
+CREATE TABLE deals (
+	id INTEGER NOT NULL, 
+	product_name VARCHAR(255) NOT NULL, 
+	price FLOAT NOT NULL, 
+	merchant VARCHAR(100) NOT NULL, 
+	expiry DATETIME NOT NULL, 
+	discount FLOAT, 
+	description TEXT, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, 
+	updated_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 12:14:15,980 - app.main - ERROR - Failed to start application: (sqlite3.OperationalError) table deals already exists
+[SQL: 
+CREATE TABLE deals (
+	id INTEGER NOT NULL, 
+	product_name VARCHAR(255) NOT NULL, 
+	price FLOAT NOT NULL, 
+	merchant VARCHAR(100) NOT NULL, 
+	expiry DATETIME NOT NULL, 
+	discount FLOAT, 
+	description TEXT, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, 
+	updated_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 12:24:07,836 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 12:24:07,836 - app.main - INFO - Initializing database...
+2025-08-14 12:24:07,837 - app.db.database - INFO - Creating database tables...
+2025-08-14 12:24:07,839 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:24:07,840 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 12:24:07,840 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:24:07,842 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 12:24:07,843 - app.db.database - INFO - Database tables created successfully
+2025-08-14 12:24:07,844 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:24:07,845 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 12:24:07,845 - sqlalchemy.engine.Engine - INFO - [generated in 0.00108s] ()
+2025-08-14 12:24:07,846 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:24:07,846 - app.main - INFO - Database health check passed
+2025-08-14 12:24:07,847 - app.db.database - ERROR - Error getting table info: 'Engine' object has no attribute 'table_names'
+2025-08-14 12:24:07,847 - app.main - INFO - Database initialized: {'error': "'Engine' object has no attribute 'table_names'"}
+2025-08-14 12:24:07,847 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 12:26:19,850 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 12:26:19,851 - app.main - INFO - Initializing database...
+2025-08-14 12:26:19,851 - app.db.database - INFO - Creating database tables...
+2025-08-14 12:26:19,853 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:26:19,854 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 12:26:19,854 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:26:19,856 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 12:26:19,857 - app.db.database - INFO - Database tables created successfully
+2025-08-14 12:26:19,858 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:26:19,859 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 12:26:19,859 - sqlalchemy.engine.Engine - INFO - [generated in 0.00126s] ()
+2025-08-14 12:26:19,860 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:26:19,861 - app.main - INFO - Database health check passed
+2025-08-14 12:26:19,861 - app.db.database - ERROR - Error getting table info: 'Engine' object has no attribute 'table_names'
+2025-08-14 12:26:19,861 - app.main - INFO - Database initialized: {'error': "'Engine' object has no attribute 'table_names'"}
+2025-08-14 12:26:19,862 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 12:30:44,435 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 12:30:44,435 - app.main - INFO - Application shutdown complete
+2025-08-14 12:30:47,295 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 12:30:47,295 - app.main - INFO - Initializing database...
+2025-08-14 12:30:47,296 - app.db.database - INFO - Creating database tables...
+2025-08-14 12:30:47,297 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:30:47,298 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 12:30:47,299 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:30:47,301 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 12:30:47,301 - app.db.database - INFO - Database tables created successfully
+2025-08-14 12:30:47,302 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:30:47,303 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 12:30:47,303 - sqlalchemy.engine.Engine - INFO - [generated in 0.00096s] ()
+2025-08-14 12:30:47,304 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:30:47,304 - app.main - INFO - Database health check passed
+2025-08-14 12:30:47,304 - app.db.database - ERROR - Error getting table info: name 'inspect' is not defined
+2025-08-14 12:30:47,305 - app.main - INFO - Database initialized: {'error': "name 'inspect' is not defined"}
+2025-08-14 12:30:47,305 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 12:31:21,438 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 12:31:21,438 - app.main - INFO - Application shutdown complete
+2025-08-14 12:31:23,941 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 12:31:23,941 - app.main - INFO - Initializing database...
+2025-08-14 12:31:23,942 - app.db.database - INFO - Creating database tables...
+2025-08-14 12:31:23,943 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:31:23,944 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 12:31:23,945 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:31:23,946 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 12:31:23,947 - app.db.database - INFO - Database tables created successfully
+2025-08-14 12:31:23,948 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:31:23,948 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 12:31:23,950 - sqlalchemy.engine.Engine - INFO - [generated in 0.00190s] ()
+2025-08-14 12:31:23,951 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:31:23,951 - app.main - INFO - Database health check passed
+2025-08-14 12:31:23,952 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:31:23,953 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 12:31:23,953 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:31:24,005 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:31:24,006 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 12:31:24,007 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 12:31:58,470 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 12:31:58,471 - app.main - INFO - Initializing database...
+2025-08-14 12:31:58,471 - app.db.database - INFO - Creating database tables...
+2025-08-14 12:31:58,473 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:31:58,474 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 12:31:58,474 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:31:58,477 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 12:31:58,477 - app.db.database - INFO - Database tables created successfully
+2025-08-14 12:31:58,478 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:31:58,478 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 12:31:58,479 - sqlalchemy.engine.Engine - INFO - [generated in 0.00116s] ()
+2025-08-14 12:31:58,480 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:31:58,480 - app.main - INFO - Database health check passed
+2025-08-14 12:31:58,481 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:31:58,481 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 12:31:58,482 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:31:58,483 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:31:58,484 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 12:31:58,484 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 12:35:41,498 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 12:35:41,498 - app.main - INFO - Application shutdown complete
+2025-08-14 12:35:44,283 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 12:35:44,283 - app.main - INFO - Initializing database...
+2025-08-14 12:35:44,283 - app.db.database - INFO - Creating database tables...
+2025-08-14 12:35:44,285 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:35:44,286 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 12:35:44,286 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:35:44,288 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 12:35:44,289 - app.db.database - INFO - Database tables created successfully
+2025-08-14 12:35:44,289 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:35:44,290 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 12:35:44,290 - sqlalchemy.engine.Engine - INFO - [generated in 0.00104s] ()
+2025-08-14 12:35:44,291 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:35:44,292 - app.main - INFO - Database health check passed
+2025-08-14 12:35:44,292 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:35:44,292 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 12:35:44,293 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:35:44,294 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:35:44,295 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 12:35:44,295 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 12:35:50,514 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 12:35:50,515 - app.main - INFO - Application shutdown complete
+2025-08-14 12:35:57,383 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 12:35:57,384 - app.main - INFO - Initializing database...
+2025-08-14 12:35:57,385 - app.db.database - INFO - Creating database tables...
+2025-08-14 12:35:57,386 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:35:57,387 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 12:35:57,388 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:35:57,389 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 12:35:57,390 - app.db.database - INFO - Database tables created successfully
+2025-08-14 12:35:57,391 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:35:57,391 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 12:35:57,392 - sqlalchemy.engine.Engine - INFO - [generated in 0.00113s] ()
+2025-08-14 12:35:57,393 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:35:57,393 - app.main - INFO - Database health check passed
+2025-08-14 12:35:57,394 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:35:57,394 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 12:35:57,395 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:35:57,396 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:35:57,396 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 12:35:57,397 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 12:36:56,041 - app.main - INFO - Incoming request: GET http://localhost:8000/docs
+2025-08-14 12:36:56,056 - app.main - INFO - Request completed: GET http://localhost:8000/docs - Status: 200 - Time: 0.0153s
+2025-08-14 12:36:56,849 - app.main - INFO - Incoming request: GET http://localhost:8000/openapi.json
+2025-08-14 12:36:56,869 - app.main - INFO - Request completed: GET http://localhost:8000/openapi.json - Status: 200 - Time: 0.0198s
+2025-08-14 12:37:28,158 - app.main - INFO - Incoming request: POST http://localhost:8000/api/v1/deals/
+2025-08-14 12:37:28,167 - app.routers.deals - INFO - Creating new deal for product: Rice 5kg Premium Quality
+2025-08-14 12:37:28,203 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:37:28,206 - sqlalchemy.engine.Engine - INFO - INSERT INTO deals (product_name, price, merchant, expiry, discount, description) VALUES (?, ?, ?, ?, ?, ?) RETURNING id, created_at, updated_at
+2025-08-14 12:37:28,207 - sqlalchemy.engine.Engine - INFO - [generated in 0.00076s] ('Rice 5kg Premium Quality', 180.0, 'Naivas Supermarket', '2025-08-20 23:59:59.000000', 20.0, 'High-quality premium rice with 20% discount. Limited time offer.')
+2025-08-14 12:37:28,246 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 12:37:28,398 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:37:28,412 - sqlalchemy.engine.Engine - INFO - SELECT deals.id, deals.product_name, deals.price, deals.merchant, deals.expiry, deals.discount, deals.description, deals.created_at, deals.updated_at 
+FROM deals 
+WHERE deals.id = ?
+2025-08-14 12:37:28,414 - sqlalchemy.engine.Engine - INFO - [generated in 0.00181s] (1,)
+2025-08-14 12:37:28,416 - app.routers.deals - INFO - Deal created successfully with ID: 1
+2025-08-14 12:37:28,418 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:37:28,420 - app.main - INFO - Request completed: POST http://localhost:8000/api/v1/deals/ - Status: 201 - Time: 0.2628s
+2025-08-14 12:38:12,291 - app.main - INFO - Incoming request: GET http://localhost:8000/api/v1/deals/1
+2025-08-14 12:38:12,295 - app.routers.deals - INFO - Retrieving deal with ID: 1
+2025-08-14 12:38:12,298 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:53:19,272 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 12:53:19,272 - app.main - INFO - Application shutdown complete
+2025-08-14 12:53:22,285 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 12:53:22,286 - app.main - INFO - Initializing database...
+2025-08-14 12:53:22,286 - app.db.database - INFO - Creating database tables...
+2025-08-14 12:53:22,288 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:53:22,288 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 12:53:22,289 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:53:22,291 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 12:53:22,292 - app.db.database - INFO - Database tables created successfully
+2025-08-14 12:53:22,293 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:53:22,293 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 12:53:22,294 - sqlalchemy.engine.Engine - INFO - [generated in 0.00107s] ()
+2025-08-14 12:53:22,294 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:53:22,295 - app.main - INFO - Database health check passed
+2025-08-14 12:53:22,296 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 12:53:22,296 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 12:53:22,297 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 12:53:22,298 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 12:53:22,299 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 12:53:22,299 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 13:02:06,645 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 13:02:06,645 - app.main - INFO - Initializing database...
+2025-08-14 13:02:06,646 - app.db.database - INFO - Creating database tables...
+2025-08-14 13:02:06,647 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:02:06,648 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 13:02:06,648 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:02:06,650 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 13:02:06,650 - app.db.database - INFO - Database tables created successfully
+2025-08-14 13:02:06,651 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:02:06,651 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 13:02:06,652 - sqlalchemy.engine.Engine - INFO - [generated in 0.00096s] ()
+2025-08-14 13:02:06,652 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:02:06,653 - app.main - INFO - Database health check passed
+2025-08-14 13:02:06,653 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:02:06,654 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 13:02:06,654 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:02:06,655 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:02:06,656 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 13:02:06,656 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 13:23:24,483 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 13:23:24,484 - app.main - INFO - Application shutdown complete
+2025-08-14 13:23:27,375 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 13:23:27,375 - app.main - INFO - Initializing database...
+2025-08-14 13:23:27,376 - app.db.database - INFO - Creating database tables...
+2025-08-14 13:23:27,377 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:23:27,378 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 13:23:27,378 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:23:27,380 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 13:23:27,381 - app.db.database - INFO - Database tables created successfully
+2025-08-14 13:23:27,382 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:23:27,382 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 13:23:27,383 - sqlalchemy.engine.Engine - INFO - [generated in 0.00097s] ()
+2025-08-14 13:23:27,383 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:23:27,384 - app.main - INFO - Database health check passed
+2025-08-14 13:23:27,384 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:23:27,385 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 13:23:27,385 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:23:27,386 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:23:27,386 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 13:23:27,387 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 13:23:51,302 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 13:23:51,303 - app.main - INFO - Application shutdown complete
+2025-08-14 13:23:54,111 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 13:23:54,111 - app.main - INFO - Initializing database...
+2025-08-14 13:23:54,112 - app.db.database - INFO - Creating database tables...
+2025-08-14 13:23:54,116 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:23:54,118 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 13:23:54,118 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:23:54,120 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 13:23:54,120 - app.db.database - INFO - Database tables created successfully
+2025-08-14 13:23:54,121 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:23:54,122 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 13:23:54,122 - sqlalchemy.engine.Engine - INFO - [generated in 0.00115s] ()
+2025-08-14 13:23:54,123 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:23:54,124 - app.main - INFO - Database health check passed
+2025-08-14 13:23:54,124 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:23:54,125 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 13:23:54,125 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:23:54,126 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:23:54,127 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 13:23:54,127 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 13:24:02,009 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 13:24:02,010 - app.main - INFO - Application shutdown complete
+2025-08-14 13:24:04,879 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 13:24:04,880 - app.main - INFO - Initializing database...
+2025-08-14 13:24:04,880 - app.db.database - INFO - Creating database tables...
+2025-08-14 13:24:04,882 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:24:04,883 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 13:24:04,884 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:24:04,886 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 13:24:04,887 - app.db.database - INFO - Database tables created successfully
+2025-08-14 13:24:04,888 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:24:04,889 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 13:24:04,889 - sqlalchemy.engine.Engine - INFO - [generated in 0.00108s] ()
+2025-08-14 13:24:04,890 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:24:04,890 - app.main - INFO - Database health check passed
+2025-08-14 13:24:04,891 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:24:04,892 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 13:24:04,892 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:24:04,893 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:24:04,893 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 13:24:04,893 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 13:24:30,584 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 13:24:30,584 - app.main - INFO - Application shutdown complete
+2025-08-14 13:24:33,790 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 13:24:33,791 - app.main - INFO - Initializing database...
+2025-08-14 13:24:33,791 - app.db.database - INFO - Creating database tables...
+2025-08-14 13:24:33,793 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:24:33,794 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 13:24:33,794 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:24:33,796 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 13:24:33,797 - app.db.database - INFO - Database tables created successfully
+2025-08-14 13:24:33,798 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:24:33,799 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 13:24:33,800 - sqlalchemy.engine.Engine - INFO - [generated in 0.00181s] ()
+2025-08-14 13:24:33,801 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:24:33,802 - app.main - INFO - Database health check passed
+2025-08-14 13:24:33,802 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:24:33,804 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 13:24:33,804 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:24:33,806 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:24:33,806 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 13:24:33,807 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 13:24:46,250 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 13:24:46,250 - app.main - INFO - Application shutdown complete
+2025-08-14 13:24:49,489 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 13:24:49,490 - app.main - INFO - Initializing database...
+2025-08-14 13:24:49,490 - app.db.database - INFO - Creating database tables...
+2025-08-14 13:24:49,492 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:24:49,493 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 13:24:49,494 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:24:49,498 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 13:24:49,500 - app.db.database - INFO - Database tables created successfully
+2025-08-14 13:24:49,501 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:24:49,502 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 13:24:49,503 - sqlalchemy.engine.Engine - INFO - [generated in 0.00170s] ()
+2025-08-14 13:24:49,504 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:24:49,505 - app.main - INFO - Database health check passed
+2025-08-14 13:24:49,506 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:24:49,506 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 13:24:49,507 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:24:49,508 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:24:49,509 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 13:24:49,509 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 13:24:59,616 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 13:24:59,617 - app.main - INFO - Application shutdown complete
+2025-08-14 13:25:02,759 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 13:25:02,759 - app.main - INFO - Initializing database...
+2025-08-14 13:25:02,759 - app.db.database - INFO - Creating database tables...
+2025-08-14 13:25:02,761 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:25:02,762 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 13:25:02,762 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:25:02,764 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 13:25:02,765 - app.db.database - INFO - Database tables created successfully
+2025-08-14 13:25:02,766 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:25:02,766 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 13:25:02,767 - sqlalchemy.engine.Engine - INFO - [generated in 0.00114s] ()
+2025-08-14 13:25:02,767 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:25:02,768 - app.main - INFO - Database health check passed
+2025-08-14 13:25:02,768 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:25:02,769 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 13:25:02,769 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:25:02,770 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:25:02,771 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 13:25:02,771 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 13:25:24,890 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 13:25:24,890 - app.main - INFO - Application shutdown complete
+2025-08-14 13:25:27,590 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 13:25:27,591 - app.main - INFO - Initializing database...
+2025-08-14 13:25:27,591 - app.db.database - INFO - Creating database tables...
+2025-08-14 13:25:27,593 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:25:27,593 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 13:25:27,594 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:25:27,595 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 13:25:27,596 - app.db.database - INFO - Database tables created successfully
+2025-08-14 13:25:27,597 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:25:27,598 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 13:25:27,598 - sqlalchemy.engine.Engine - INFO - [generated in 0.00115s] ()
+2025-08-14 13:25:27,599 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:25:27,599 - app.main - INFO - Database health check passed
+2025-08-14 13:25:27,600 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:25:27,600 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 13:25:27,601 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:25:27,602 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:25:27,603 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 13:25:27,603 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 13:26:54,179 - app.main - INFO - Starting SmartBuy Deal Aggregation Engine...
+2025-08-14 13:26:54,180 - app.main - INFO - Initializing database...
+2025-08-14 13:26:54,180 - app.db.database - INFO - Creating database tables...
+2025-08-14 13:26:54,182 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:26:54,183 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("deals")
+2025-08-14 13:26:54,183 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:26:54,185 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-08-14 13:26:54,185 - app.db.database - INFO - Database tables created successfully
+2025-08-14 13:26:54,186 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:26:54,187 - sqlalchemy.engine.Engine - INFO - SELECT 1
+2025-08-14 13:26:54,188 - sqlalchemy.engine.Engine - INFO - [generated in 0.00173s] ()
+2025-08-14 13:26:54,188 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:26:54,188 - app.main - INFO - Database health check passed
+2025-08-14 13:26:54,189 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-08-14 13:26:54,189 - sqlalchemy.engine.Engine - INFO - SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite~_%' ESCAPE '~' ORDER BY name
+2025-08-14 13:26:54,190 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-08-14 13:26:54,190 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-08-14 13:26:54,191 - app.main - INFO - Database initialized: {'total_tables': 1, 'table_names': ['deals'], 'engine_info': 'sqlite:///./database.db', 'driver': 'sqlite'}
+2025-08-14 13:26:54,191 - app.main - INFO - SmartBuy Deal Aggregation Engine started successfully
+2025-08-14 15:37:27,973 - app.main - INFO - Shutting down SmartBuy Deal Aggregation Engine...
+2025-08-14 15:37:27,974 - app.main - INFO - Application shutdown complete
